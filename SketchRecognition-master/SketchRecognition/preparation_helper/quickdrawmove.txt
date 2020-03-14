@@ -1,0 +1,7 @@
+results = []
+results += [each for each in os.listdir('/content/') if each.endswith('.npy')]
+print(results)
+print(len(results))
+import shutil, os
+for f in results:
+    shutil.move(f, '/content/dataset/quickdraw_data_full/')
